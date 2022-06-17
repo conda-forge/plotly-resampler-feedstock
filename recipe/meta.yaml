@@ -1,5 +1,5 @@
 {% set name = "plotly-resampler" %}
-{% set version = "0.6.4.2" %}
+{% set version = "0.7.0" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/plotly-resampler-{{ version }}.tar.gz
-  sha256: 02ff182f9c52ee5af70e74bfa3eb54e598cd1aea398fcbe6322145dc3a5c320c
+  sha256: 71adffdb890a29c915016120511869d6144fc7a24c8e50750a3fc05e2d96621e
 
 build:
   number: 0
