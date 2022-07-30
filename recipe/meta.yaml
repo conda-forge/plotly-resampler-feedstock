@@ -36,10 +36,12 @@ requirements:
 test:
   imports:
     - plotly_resampler
-  commands:
-    - pip check
-  requires:
-    - pip
+    - plotly_resampler.figure_resampler
+    - plotly_resampler.aggregation
+#  commands:
+#    - pip check
+#  requires:
+#    - pip
 
 about:
   home: https://github.com/predict-idlab/plotly-resampler
