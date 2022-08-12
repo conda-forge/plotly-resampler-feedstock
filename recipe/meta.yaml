@@ -19,7 +19,7 @@ requirements:
   host:
     - numpy >=1.14
     - pip
-    - poetry-core >=1.1.0a6
+    - poetry-core  # >=1.1.0a6
     - python >=3.7.1,<3.11
   run:
     - dash >=2.2.0
