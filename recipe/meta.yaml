@@ -1,5 +1,5 @@
 {% set name = "plotly-resampler" %}
-{% set version = "0.8.1" %}
+{% set version = "0.8.3" %}
 
 
 package:
@@ -7,8 +7,8 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/plotly-resampler-{{ version }}.tar.gz
-  sha256: 774940a64bf6e6d9fe0eafff42f12ca1f3df7a3603efbcfcea5ed901fdc6b35a
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/plotly_resampler-{{ version }}.tar.gz
+  sha256: d656986d458370ea9a3486042b00b942f32746b5ef173d55786b7a47910bd809
 
 build:
   number: 0
@@ -20,7 +20,7 @@ requirements:
     - numpy >=1.14
     - pip
     - poetry-core  # >=1.1.0a6
-    - python >=3.7.1,<3.11
+    - python >=3.7.1
   run:
     - dash >=2.2.0
     - flask-cors >=3.0.10
@@ -31,7 +31,7 @@ requirements:
     - orjson >=3.7.7
     - pandas >=1.3.5
     - plotly >=5.6.0
-    - python >=3.7.1,<3.11
+    - python >=3.7.1
     - trace-updater >=0.0.8
 
 test:
