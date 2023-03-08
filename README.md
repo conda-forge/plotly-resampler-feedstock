@@ -1,11 +1,11 @@
-About plotly-resampler
-======================
+About plotly-resampler-feedstock
+================================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/plotly-resampler-feedstock/blob/main/LICENSE.txt)
 
 Home: https://github.com/predict-idlab/plotly-resampler
 
 Package license: LicenseRef-plotly-resampler
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/plotly-resampler-feedstock/blob/main/LICENSE.txt)
 
 Summary: Visualizing large time series with plotly
 
