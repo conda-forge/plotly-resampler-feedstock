@@ -14,7 +14,7 @@ build:
   skip: True  # [py<37]
   number: 0
   script:
-    - {{ PYTHON }} build.py
+    - {{ PYTHON }} -m poetry build
     - {{ PYTHON }} -m pip install . -vv
 
 requirements:
