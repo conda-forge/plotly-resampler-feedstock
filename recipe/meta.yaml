@@ -30,7 +30,7 @@ requirements:
     - dash >=2.2.0,<3.0.0
     - flask-cors >=3.0.10,<4.0.0
     - jupyter-dash >=0.4.2
-    - kaleido ==0.2.1
+    - python-kaleido ==0.2.1
     - numpy >=1.14
     - orjson >=3.8.0,<4.0.0
     - pandas >=1.3.5,<2.0.0
