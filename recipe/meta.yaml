@@ -13,9 +13,7 @@ source:
 build:
   skip: True  # [py<37]
   number: 0
-  script:
-    - {{ PYTHON }} -m poetry build
-    - {{ PYTHON }} -m pip install . -vv
+  script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   build:
@@ -42,7 +40,7 @@ test:
   imports:
     - plotly_resampler
     - plotly_resampler.figure_resampler
-    - plotly_resampler.aggregation
+    - plotly_resampler.aggregation.algorithms.lttbc
   commands:
     - pip check
   requires:
