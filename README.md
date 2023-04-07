@@ -244,6 +244,3 @@ Feedstock Maintainers
 * [@jvdd](https://github.com/jvdd/)
 * [@thewchan](https://github.com/thewchan/)
 
-
-<!-- dummy commit to enable rerendering -->
-
