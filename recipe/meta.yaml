@@ -19,11 +19,6 @@ requirements:
     - {{ compiler('c') }}
   host:
     - python
-    # at the time of writing
-    # numpy is globally pinned to 1.21 at build time
-    # and will export constraints that will require
-    # numpy 1.21 or greater at run time
-    - numpy
     - pip
     - poetry-core
   run:
