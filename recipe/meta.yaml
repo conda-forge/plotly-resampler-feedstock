@@ -11,6 +11,8 @@ source:
   sha256: 7485a17825045884ce7b05d9d7ff9a08fabbefb5d283599656633cf165a0af8f
 
 build:
+  # tsdownsample not available for win or python 3.11 yet
+  skip: True  # [win or py>=311]
   number: 0
   script: {{ PYTHON }} -m pip install . -vv
 
