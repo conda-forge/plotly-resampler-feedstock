@@ -34,6 +34,10 @@ requirements:
     - trace-updater >=0.0.8
     - tsdownsample ==0.1.2
 
+    # Pip check complains about dash dependency here's to satistfy it
+    - flask <2.3.0,>=1.0.4
+    - werkzeug <2.3.0
+
 test:
   imports:
     - plotly_resampler
