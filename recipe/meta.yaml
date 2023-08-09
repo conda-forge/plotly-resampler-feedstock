@@ -37,8 +37,6 @@ requirements:
 test:
   imports:
     - plotly_resampler
-    - plotly_resampler.figure_resampler
-    - plotly_resampler.aggregation.algorithms.lttbc
   commands:
     - pip check
   requires:
