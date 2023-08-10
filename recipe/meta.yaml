@@ -11,25 +11,21 @@ source:
   sha256: 28d53709c8bfa8d0d4f85a0d969cbce2d2bfc00c376b8f932cd280360a5bb8cc
 
 build:
-  # tsdownsample not available for win
-  skip: true  # [win]
-  number: 0
+  noarch: python
+  number: 1
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
-  build:
-    - {{ compiler('c') }}
   host:
-    - python
+    - python >=3.7.1,<4.0.0
     - pip
     - poetry-core
   run:
-    - python
+    - python >=3.7.1,<4.0.0
     - dash >=2.11.0,<3.0.0
     - flask-cors >=3.0.10,<4.0.0
     - jupyter-dash >=0.4.2
-    - numpy >=1.14  # [py<311]
-    - numpy >=1.24  # [py>=311]
+    - numpy >=1.14
     - orjson >=3.8.0,<4.0.0
     - pandas >=1
     - plotly >=5.5.0,<6.0.0
