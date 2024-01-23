@@ -23,11 +23,11 @@ requirements:
   run:
     - python >=3.7.1
     - plotly >=5.5.0
-    - dash >=2.11.0
+    - dash >=2.9.0
     - pandas >=1
     - trace-updater >=0.0.8
     - numpy >=1.14
-    - orjson >=3.8.0
+    - orjson >=3.8.0,<4.0.0
     - tsdownsample ==0.1.2
   run_constrained:
     # Pip check complains about dash dependency here's to satistfy it
