@@ -21,7 +21,7 @@ requirements:
     - pip
     - poetry-core
   run:
-    - python >= {{ python_min }}
+    - python >={{ python_min }}
     - plotly >=5.5.0,<6.0.0
     - dash >=2.9.0
     - pandas >=1
