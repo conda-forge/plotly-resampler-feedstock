@@ -11,19 +11,20 @@ source:
   sha256: e3f9ceeb5749de9a85d39755f50711a7d6a28eb1b284da250251c8896ccc1cfd
 
 build:
-  noarch: python
+  skip: true  # [py>=400 or py2k]
+  script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
   number: 0
-  script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
-    - python {{ python_min }}
-    - pip
+    - python
     - poetry-core
+    - pip
   run:
     - python >=3.8.0,<4.0.0
     - plotly >=5.5.0,<7.0.0
     - dash >=2.11.0
+    - pandas >=1  # [py<313]
     - pandas >=2.2.3  # [py>=313]
     - numpy >=1.14  # [py<311]
     - numpy >=1.24  # [py>=311 and py<313]
