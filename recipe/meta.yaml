@@ -1,5 +1,5 @@
 {% set name = "plotly-resampler" %}
-{% set version = "0.10.0" %}
+{% set version = "0.11.0" %}
 
 
 package:
@@ -8,33 +8,32 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_') }}-{{ version }}.tar.gz
-  sha256: e1063d6d00aa4aedeb8c2c204de8661751b2145fd06682cd8fead9983c9a8334
+  sha256: e3f9ceeb5749de9a85d39755f50711a7d6a28eb1b284da250251c8896ccc1cfd
 
 build:
-  noarch: python
-  number: 1
-  script: {{ PYTHON }} -m pip install . -vv
+  skip: true  # [py>=400 or py2k]
+  script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
+  number: 0
 
 requirements:
   host:
     - python {{ python_min }}
-    - pip
     - poetry-core
+    - pip
   run:
-    - python >={{ python_min }}
-    - plotly >=5.5.0,<6.0.0
-    - dash >=2.9.0
-    - pandas >=1
-    - trace-updater >=0.0.8
-    - numpy >=1.14
-    - orjson >=3.8.0,<4.0.0
+    - python {{ python_min }}
+    - plotly >=5.5.0,<7.0.0
+    - dash >=2.11.0
+    - pandas >=1  # [py<313]
+    - pandas >=2.2.3  # [py>=313]
+    - numpy >=1.14  # [py<311]
+    - numpy >=1.24  # [py>=311 and py<313]
+    - numpy >=2.0  # [py>=313]
+    - orjson >=3.10.0,<4.0.0
     - tsdownsample >=0.1.3
   run_constrained:
-    # Pip check complains about dash dependency here's to satistfy it
-    - flask <3.1.0,>=1.0.4
-    - werkzeug <3.1.0
-    - flask-cors >=3.0.10
-    - jupyter-dash >=0.4.2
+    - flask_cors >=4.0.2,<5.0.0
+    - python-kaleido 0.2.1
 
 test:
   imports:
