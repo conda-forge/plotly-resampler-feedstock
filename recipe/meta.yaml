@@ -17,11 +17,11 @@ build:
 
 requirements:
   host:
-    - python
+    - python {{ python_min }}
     - poetry-core
     - pip
   run:
-    - python >=3.8.0,<4.0.0
+    - python {{ python_min }}
     - plotly >=5.5.0,<7.0.0
     - dash >=2.11.0
     - pandas >=1  # [py<313]
