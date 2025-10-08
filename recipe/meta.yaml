@@ -20,7 +20,7 @@ requirements:
     - python {{ python_min }}
     - poetry-core
     - pip
-run:
+  run:
     - python {{ python_min }}
     - plotly >=5.5.0,<7.0.0
     - dash >=2.11.0
