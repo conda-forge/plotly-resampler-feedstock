@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: plotly-resampler
-  version: 0.11.0
+  version: "0.11.1"
 
 package:
   name: ${{ name|lower }}
@@ -10,10 +10,10 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/plotly_resampler-${{ version }}.tar.gz
-  sha256: e3f9ceeb5749de9a85d39755f50711a7d6a28eb1b284da250251c8896ccc1cfd
+  sha256: 54ea25120ff05eb6f66c421c690ea1fe7b43708c9a868c554c8e9cb5cc33b38d
 
 build:
-  number: 1
+  number: 0
   noarch: python
   script: ${{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
 
