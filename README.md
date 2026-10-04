@@ -1,7 +1,7 @@
 About plotly-resampler-feedstock
 ================================
 
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/plotly-resampler-feedstock-fork-feedstock/blob/main/LICENSE.txt)
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/plotly-resampler-feedstock/blob/main/LICENSE.txt)
 
 Home: https://github.com/predict-idlab/plotly-resampler
 
@@ -15,10 +15,11 @@ Current build status
 ====================
 
 
-<table><tr><td>All platforms:</td>
+<table><tr>
+    <td>All platforms:</td>
     <td>
-      <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=None&branchName=main">
-        <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/plotly-resampler-feedstock-fork-feedstock?branchName=main">
+      <a href="https://github.com/conda-forge/plotly-resampler-feedstock/actions/workflows/conda-build.yml">
+        <img src="https://github.com/conda-forge/plotly-resampler-feedstock/actions/workflows/conda-build.yml/badge.svg?event=push&branch=main">
       </a>
     </td>
   </tr>
@@ -41,31 +42,73 @@ conda config --add channels conda-forge
 conda config --set channel_priority strict
 ```
 
-Once the `conda-forge` channel has been enabled, `plotly-resampler` can be installed with `conda`:
+How to use
+----------
+
+<details>
+<summary>With conda</summary>
 
 ```
 conda install plotly-resampler
 ```
 
-or with `mamba`:
+</details>
+
+<details>
+<summary>With mamba</summary>
 
 ```
 mamba install plotly-resampler
 ```
 
-It is possible to list all of the versions of `plotly-resampler` available on your platform with `conda`:
+</details>
+
+<details>
+<summary>With pixi</summary>
+
+```
+# for adding to your local project
+pixi add plotly-resampler
+# for installing globally
+pixi global install plotly-resampler
+```
+
+</details>
+
+Search package versions
+-----------------------
+
+It is possible to list all of the versions of `plotly-resampler` available on your platform:
+
+<details>
+<summary>With conda</summary>
 
 ```
 conda search plotly-resampler --channel conda-forge
 ```
 
-or with `mamba`:
+</details>
+
+<details>
+<summary>With mamba</summary>
 
 ```
 mamba search plotly-resampler --channel conda-forge
 ```
 
-Alternatively, `mamba repoquery` may provide more information:
+</details>
+
+<details>
+<summary>With pixi</summary>
+
+```
+pixi search plotly-resampler --channel conda-forge
+```
+
+</details>
+
+<details>
+<summary>With mamba repoquery, which may provide more information</summary>
 
 ```
 # Search all versions available on your platform:
@@ -77,6 +120,8 @@ mamba repoquery whoneeds plotly-resampler --channel conda-forge
 # List dependencies of `plotly-resampler`:
 mamba repoquery depends plotly-resampler --channel conda-forge
 ```
+
+</details>
 
 
 About conda-forge
